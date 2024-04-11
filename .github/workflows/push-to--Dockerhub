@@ -4,6 +4,7 @@ name: Build and Push Docker image to Docker Hub
 on:
   push:
     branches: [ fullstack-final ]
+  workflow_dispatch:
 
 jobs:
   Deploy:
@@ -16,7 +17,7 @@ jobs:
       - name: SSH into EC2 and run commands
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: 13.40.127.171
+          host: 3.9.146.191
           username: ubuntu
           key: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
