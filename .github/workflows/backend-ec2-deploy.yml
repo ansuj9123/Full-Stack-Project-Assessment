@@ -16,7 +16,7 @@ jobs:
       - name: SSH into EC2 and run commands
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: 13.40.127.171
+          host: 3.9.146.191
           username: ubuntu
           key: ${{ secrets.SSH_EC2_SECRET }}
           script: |
