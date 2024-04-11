@@ -4,7 +4,7 @@ name: Build and Push Docker image to Docker Hub
 on:
   push:
     branches: [ fullstack-final ]
-  workflow_dispatch:
+  workflow_dispatch: true
 
 jobs:
   Deploy:
